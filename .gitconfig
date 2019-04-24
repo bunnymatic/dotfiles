@@ -1,9 +1,12 @@
 [user]
+	email = jon@carbonfive.com
+	name = Jon Rogers
 [alias]
   st = status
   ssb = status -sb
   ci = commit
   cia = commit --amend
+  cif = commit --fixup
   co = checkout
   cob = checkout -b
   br = branch
@@ -12,7 +15,8 @@
   lg = log -p
   lll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lolat = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lola = log --graph --decorate --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
   ls = ls-files
   com  = checkout master
   cod  = checkout develop
@@ -43,7 +47,6 @@
 
   stashshow = "!f() { git stash show stash^{/$*} -p; }; f"
   stashapply = "!f() { git stash apply stash^{/$*}; }; f"
-
 [color]
   diff = auto
   branch = auto
@@ -81,7 +84,6 @@
   whitespace = nowarn
 [rebase]
   autosquash = true
-[user]
 [user]
 	email = jon@carbonfive.com
 	name = Jon Rogers

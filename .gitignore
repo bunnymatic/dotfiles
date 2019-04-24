@@ -11,14 +11,20 @@ Sublime\ Text\ */Cache/*
 Sublime\ Text\ */Local/*
 tmp/*
 .DS_Store
+*.pyc
 
 # emacs temp files
 *~
 \.\#*
 
+coverage
+
 emacs_d/.mc-lists.el
 emacs_d/elpa/
+emacs_d/elpa/*
 emacs_d/eshell
+emacs_d/eshell/history
+emacs_d/eshell/lastdir
 emacs_d/ido.last
 emacs_d/init.el
 emacs_d/projectile-bookmarks.eld
