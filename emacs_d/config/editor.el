@@ -1,13 +1,15 @@
+(setq-default indent-tabs-mode nil)
+(setq-default scss-compile-at-save nil)
+(setq-default show-trailing-whitespace t)
+
 (setq-default c-basic-offset 2)
 (setq-default tab-width 2)
 (setq-default js-indent-level 2)
 (setq-default css-indent-offset 2)
-(setq-default indent-tabs-mode nil)
-(setq-default scss-compile-at-save nil)
+(setq-default typescript-indent-level 2)
 (setq-default web-mode-markup-indent-offset 2)
 (setq-default web-mode-css-indent-offset 2)
 (setq-default web-mode-code-indent-offset 2)
-(setq-default show-trailing-whitespace t)
 
 (require 'color-theme)
 (color-theme-initialize)

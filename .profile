@@ -12,24 +12,25 @@ alias pd="pushd"
 alias pop="popd"
 alias lookfor="history | grep"
 alias js="java -jar ~/utils/rhino/js.jar"
-alias svnchanged='svn status | egrep "^\ M\ |^M\ " |  cut -c8-'
 alias jslint="jsl -process"
+
 alias be='bundle exec '
 alias bi='bundle install '
 alias bu='bundle update '
+
 alias serveit='python -m SimpleHTTPServer '
 alias servit='serveit'
+
 alias simulator_android='/Users/jon/Library/Android/sdk/tools/emulator -netdelay none -netspeed full -avd Nexus_5_API_21_x86'
 alias simulator_ipad='xcrun instruments -w "iPad Air 2"'
 alias simulator_iphone='xcrun instruments -w "iPhone 6s Plus"'
-alias googleunsafe='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security'
 
 foremandev() {
     foreman "$1" -f Procfile.dev
 }
 
 
-eval "$(rbenv init -)"
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -88,7 +89,6 @@ done
 sourceit /usr/local/git/contrib/completion/git-completion.bash
 sourceit /usr/local/etc/bash_completion.d/git-completion.bash
 
-export PYTHONPATH=/usr/local/lib/python2.5/site-packages
 export EDITOR=/usr/bin/vi
 
 PROJECTS=/projects/
@@ -100,27 +100,21 @@ export ACAD=${PROJECTS}/autocad360-web/
 export ALLOCATIONS=${PROJECTS}/allocations
 export AM=${PROJECTS}/anson_mills
 export APSVC=${GAP}/allocation-fulfillment-service
-export APSVC=${GAP}/allocation-fulfillment-service
 export ASIAN=${PROJECTS}/asian
 export AWEB=${GAP}/allocation-web
 export AWEB=${GAP}/allocation-web
 export BAPI=${PROJECTS}/bunnymatic-api
 export BAR=${PROJECTS}/barista
 export BOOK=${GAP}/booking-manager
-export BOOK=${GAP}/booking-manager
-export BOOKUI=${GAP}/booking-manager-ui
 export BOOKUI=${GAP}/booking-manager-ui
 export BRESBO=${PROJECTS}/bresbo
-export CATSVC=${GAP}/allocation-catalog-service
 export CATSVC=${GAP}/allocation-catalog-service
 export COG=${PROJECTS}/cognoa
 export COG=${PROJECTS}/cognoa
 export CTA=${PROJECTS}/cta
 export DORO=${PROJECTS}/doro
-export DORO=${PROJECTS}/doro
 export DREAM=${PROJECTS}/dream_team/DREAMassets/
 export E1890=${PROJECTS}/1890web/
-export FAUX=${PROJECTS}/fauxtaux_booth
 export FAUX=${PROJECTS}/fauxtaux_booth
 export FIS=${PROJECTS}/sharespost/sharex-fis
 export GLUEBOT=${PROJECTS}/gluebot
@@ -135,15 +129,12 @@ export LT=${PROJECTS}/localtakesf
 export MANDIBLE=${PROJECTS}/mandible
 export MANGO=${PROJECTS}/mango
 export MAU=${PROJECTS}/mau
-export MAU=${PROJECTS}/mau
 export NEON=${PROJECTS}/tr/1p-frontend-new/1p-frontend-webapp
 export NETPERF=${PROJECTS}/net_performance_monitor
-export NETPERF=${PROJECTS}/net_performance_monitor
 export PAPAYA=${PROJECTS}/papaya
+export PLASTIQ=${PROJECTS}/plastiq/gemini
 export PATENT=${PROJECTS}/patent-scraper
 export QR=${PROJECTS}/qr4r
-export QR=${PROJECTS}/qr4r
-export ROMEY=${PROJECTS}/romeydesigns
 export ROMEY=${PROJECTS}/romeydesigns
 export SC=${PROJECTS}/selectorschoice
 export SEARCHER=${PROJECTS}/elasticsearcher
@@ -157,7 +148,6 @@ export TRWEB=${PROJECTS}/tr/tr-webui
 export WBACK=${PROJECTS}/worthi/worthi-backend
 export WFRONT=${PROJECTS}/worthi/worthi-frontend
 export WORTHI=${PROJECTS}/worthi
-export WORTHI=${PROJECTS}/worthi
 
 export GOPATH=${PROJECTS}/goprojects
 
@@ -167,8 +157,6 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin
 export PATH=$PATH:/Users/jon/utils:/Users/jon/utils/perl
 export PATH=./.git/safe/../../bin/:./.git/safe/../../node_modules/.bin/:${PATH}
-export PATH="$(brew --prefix qt@5.7)/bin:${PATH}"
-export PATH=$PATH:/usr/local/opt/qt@5.5/bin
 export PATH=$PATH:~/.mix/escripts/
 export PATH="${PROJECTS}/android-sdk-macosx/tools:$PATH"
 export PATH="${PROJECTS}/android-sdk-macosx/platform-tools:$PATH"
@@ -211,10 +199,6 @@ setup_pair() {
 
 alias gw='./gradlew'
 
-export CLASSPATH=$CLASSPATH:~/Downloads/db2jcc.jar
-export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
-export PATH=${PATH}:~/Library/Python/3.6/bin/
-
 # The next line updates PATH for the Google Cloud SDK.
 GOOGLE_CLOUD_SDK_DIR=~/google-cloud-sdk
 
@@ -228,3 +212,13 @@ export GIT_DUET_CO_AUTHORED_BY=1
 gl () {
   paste -d' ' <(git log --color --pretty=format:'%ai' "$@") <(git log --color --oneline --decorate "$@")
 }
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+if command -v rbenv 1>/dev/null 2>&1; then
+  eval "$(rbenv init -)"
+fi
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
