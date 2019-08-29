@@ -29,12 +29,21 @@ foremandev() {
     foreman "$1" -f Procfile.dev
 }
 
-
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+# run this after we set local/bin on path
+eval "$(rbenv init -)"
+
+export MANPATH=$MANPATH:/usr/local/man
+#export PG_USER=jon
+shopt -s histappend
+export HISTCONTROL=ignoreboth:erasedups
+export HISTIGNORE='ls:fg:bg:history'
+export PHANTOMJS_BIN=`which phantomjs`
 
 
 smbip() {
@@ -93,15 +102,14 @@ export EDITOR=/usr/bin/vi
 
 PROJECTS=/projects/
 [[ -d ~/projects/ ]] && PROJECTS=~/projects/
-export GAP=${PROJECTS}/gap
 
 export AAM=${PROJECTS}/asian
 export ACAD=${PROJECTS}/autocad360-web/
 export ALLOCATIONS=${PROJECTS}/allocations
 export AM=${PROJECTS}/anson_mills
+export ANDROID_HOME=${PROJECTS}/android-sdk-macosx/
 export APSVC=${GAP}/allocation-fulfillment-service
 export ASIAN=${PROJECTS}/asian
-export AWEB=${GAP}/allocation-web
 export AWEB=${GAP}/allocation-web
 export BAPI=${PROJECTS}/bunnymatic-api
 export BAR=${PROJECTS}/barista
@@ -110,14 +118,15 @@ export BOOKUI=${GAP}/booking-manager-ui
 export BRESBO=${PROJECTS}/bresbo
 export CATSVC=${GAP}/allocation-catalog-service
 export COG=${PROJECTS}/cognoa
-export COG=${PROJECTS}/cognoa
 export CTA=${PROJECTS}/cta
 export DORO=${PROJECTS}/doro
 export DREAM=${PROJECTS}/dream_team/DREAMassets/
 export E1890=${PROJECTS}/1890web/
 export FAUX=${PROJECTS}/fauxtaux_booth
 export FIS=${PROJECTS}/sharespost/sharex-fis
+export GAP=${PROJECTS}/gap
 export GLUEBOT=${PROJECTS}/gluebot
+export GOPATH=${PROJECTS}/goprojects
 export HABIT=${PROJECTS}/papaya
 export HAZL=/scratch/eventserver/hazl/
 export HM=${PROJECTS}/harrison-metal
@@ -145,22 +154,20 @@ export SPRY=${PROJECTS}/autodesk-spry
 export TIMESHEET=${PROJECTS}/timesheet
 export TISVC=${GAP}/target-inventory-service
 export TRWEB=${PROJECTS}/tr/tr-webui
-export WBACK=${PROJECTS}/worthi/worthi-backend
-export WFRONT=${PROJECTS}/worthi/worthi-frontend
 export WORTHI=${PROJECTS}/worthi
 
-export GOPATH=${PROJECTS}/goprojects
-
-export ANDROID_HOME=${PROJECTS}/android-sdk-macosx/
+export PLASTIQ_GEMINI_DIR=${PROJECTS}/plastiq/gemini
+export PLASTIQ=${PROJECTS}/plastiq/gemini
 
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/Users/jon/utils:/Users/jon/utils/perl
 export PATH=./.git/safe/../../bin/:./.git/safe/../../node_modules/.bin/:${PATH}
 export PATH=$PATH:~/.mix/escripts/
 export PATH="${PROJECTS}/android-sdk-macosx/tools:$PATH"
 export PATH="${PROJECTS}/android-sdk-macosx/platform-tools:$PATH"
 export PATH="${PROJECTS}/android-sdk-macosx/build-tools/19.0.2:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 export MANPATH=$MANPATH:/usr/local/man
 #export PG_USER=jon
@@ -181,7 +188,6 @@ export INCLUDE_PRY=1
 export JAVA_HOME=`/usr/libexec/java_home`
 # for oracle
 export DYLD_LIBRARY_PATH=/usr/local/instantclient_11_2:$DYLD_LIBRARY_PATH
-
 
 # BEGIN Ruboto setup
 sourceit ~/.rubotorc

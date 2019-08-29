@@ -6,7 +6,7 @@
  '(coffee-tab-width 2)
  '(grep-find-ignored-directories
    (quote
-    ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "log" ".meteor" "node_modules" ".idea")))
+    ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "log" ".meteor" "dist" "node_modules" "*/node_modules" ".idea")))
  '(ido-enable-flex-matching t)
  '(ido-use-faces nil)
  '(inhibit-startup-screen t)
