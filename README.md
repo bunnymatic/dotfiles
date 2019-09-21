@@ -15,3 +15,18 @@ Assuming you've cloned this directory into ~/dotfiles
     # for fish
     mkdir -p ~/.config/fish
     ln -s ~/dotfiles/config/fish/config.fish  ~/.config/fish/config.fish
+
+    # for emacs
+
+For Emacs, add a shell script (/usr/local/bin/emacs)
+
+    #!/bin/sh
+    /Applications/Emacs.app/Contents/MacOS/Emacs "$@"
+
+Make it executable
+
+    chmod +x /usr/local/bin/emacs
+
+Link to emacsclient
+
+    ln -s /Applications/Emacs.app/Contents/MacOS/bin/emacsclient /usr/local/bin/emacsclient
