@@ -2,8 +2,6 @@
 ;; (setq load-path (cons (expand-file-name "~/emacs/site-lisp/git-emacs") load-path))
 ;; (setq load-path (cons (expand-file-name "~/emacs/site-lisp") load-path))
 
-;; added with package installer
-
 (when (> emacs-major-version 23)
   (require 'package)
   (package-initialize)
@@ -22,6 +20,12 @@
 (load (format "%s/%s" emacs-configuration-file-directory "typescript.el"))
 (load (format "%s/%s" emacs-configuration-file-directory "custom.el"))
 
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+(package-install-selected-packages)
+
+
 ;; ;; `customize` settings
 ;; (setq custom-file (file-truename "./config/custom.el"))
 ;; (load custom-file)
@@ -39,28 +43,3 @@
           (lambda (frame)
             (projectile-mode)
             ))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(coffee-tab-width 2)
- '(grep-find-ignored-directories
-   (quote
-    ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "log" ".meteor" "node_modules" "*/node_modules" ".idea")))
- '(ido-enable-flex-matching t)
- '(ido-use-faces nil)
- '(inhibit-startup-screen t)
- '(javascript-indent-level 2 t)
- '(jsx-indent-level 2 t)
- '(package-selected-packages
-   (quote
-    (flycheck-rust rust-mode tide rjsx-mode emojify web-mode tramp-term sws-mode slim-mode scss-mode sass-mode ruby-tools ruby-compilation rubocop projectile-git-autofetch projectile-direnv multiple-cursors magit jump jsx-mode json-mode js2-mode jade-mode icicles helm-projectile git-blame flycheck flx-ido feature-mode exec-path-from-shell color-theme-sanityinc-solarized color-theme coffee-mode base16-theme alchemist ag add-node-modules-path)))
- '(safe-local-variable-values (quote ((setq web-mode-markup-indent-offset 4))))
- '(standard-indent 2))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
