@@ -11,3 +11,5 @@
 :backtrace: false
 :benchmark: false
 gem: --no-document --no-rdoc --no-ri
+install: --no-document --conservative
+update: --no-document --conservative

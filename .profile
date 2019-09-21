@@ -117,6 +117,7 @@ export BOOK=${GAP}/booking-manager
 export BOOKUI=${GAP}/booking-manager-ui
 export BRESBO=${PROJECTS}/bresbo
 export CATSVC=${GAP}/allocation-catalog-service
+export CM=${PROJECTS}/clearmetal
 export COG=${PROJECTS}/cognoa
 export CTA=${PROJECTS}/cta
 export DORO=${PROJECTS}/doro
