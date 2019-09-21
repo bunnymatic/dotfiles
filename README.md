@@ -6,7 +6,7 @@ Assuming you've cloned this directory into ~/dotfiles
 
     cd ~
     ln -s dotfiles/.profile .
-    ln -s dotfiles/.emacs .
+    ln -s dotfiles/emacs_d .emacs_d
     ln -s dotfiles/.gitconfig .
     ln -s dotfiles/.inputrc .
     ln -s dotfiles/.gitignore .
