@@ -226,6 +226,11 @@ if command -v rbenv 1>/dev/null 2>&1; then
   eval "$(rbenv init -)"
 fi
 
+export PYENV_ROOT=~/.pyenv/bin
+export PATH=$PYENV_ROOT:$PATH
+
 if command -v pyenv 1>/dev/null 2>&1; then
+  echo 'Init pyenv'
   eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
