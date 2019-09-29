@@ -16,12 +16,11 @@
 (setq-default web-mode-css-indent-offset 2)
 (setq-default web-mode-markup-indent-offset 2)
 
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-jsc-dark)
+(load-theme 'jsc-dark t t)
+(enable-theme 'jsc-dark)
+
 ;; (set-default-font "Monaco-14")
 ;; (load-theme 'solarized-dark t)
-;; (color-theme-solarized-dark)
 (global-linum-mode)
 
 ;; auto revert files

@@ -2,11 +2,11 @@
 ;; (setq load-path (cons (expand-file-name "~/emacs/site-lisp/git-emacs") load-path))
 ;; (setq load-path (cons (expand-file-name "~/emacs/site-lisp") load-path))
 
-(when (> emacs-major-version 23)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  )
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+			 ("melpa" . "https://melpa.org/packages/")))
+(require 'package)
+(package-initialize)
+
 (setq emacs-configuration-file-directory "~/.emacs.d/config")
 (load (format "%s/%s" emacs-configuration-file-directory "functions.el"))
 ;;; (load (format "%s/%s" emacs-configuration-file-directory "grep.el"))
@@ -60,7 +60,7 @@
  '(jsx-indent-level 2 t)
  '(package-selected-packages
    (quote
-    (projectile projectile-codesearch projectile-direnv projectile-git-autofetch projectile-rails tide rjsx-mode emojify web-mode tramp-term sws-mode slim-mode scss-mode sass-mode ruby-tools ruby-compilation rubocop multiple-cursors magit jump jsx-mode json-mode js2-mode jade-mode icicles git-blame flycheck flx-ido feature-mode exec-path-from-shell color-theme-sanityinc-solarized color-theme coffee-mode base16-theme alchemist ag add-node-modules-path)))
+    (color-theme-modern projectile projectile-codesearch projectile-direnv projectile-git-autofetch projectile-rails tide rjsx-mode emojify web-mode tramp-term sws-mode slim-mode scss-mode sass-mode ruby-tools ruby-compilation rubocop multiple-cursors magit jump jsx-mode json-mode js2-mode jade-mode icicles git-blame flycheck flx-ido feature-mode exec-path-from-shell color-theme-sanityinc-solarized coffee-mode base16-theme alchemist ag add-node-modules-path)))
  '(standard-indent 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

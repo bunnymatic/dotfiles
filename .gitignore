@@ -30,4 +30,5 @@ emacs_d/init.el
 emacs_d/projectile-bookmarks.eld
 emacs_d/recentf
 emacs_d/rake.cache
+emacs_d/network-security.data
 .dir-locals.el
