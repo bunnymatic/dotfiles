@@ -18,9 +18,9 @@
 
 (load-theme 'jsc-dark t t)
 (enable-theme 'jsc-dark)
+(set-default-font "Monaco-14")
 
-;; (set-default-font "Monaco-14")
-;; (load-theme 'solarized-dark t)
+;;(load-theme 'solarized-dark t)
 (global-linum-mode)
 
 ;; auto revert files
