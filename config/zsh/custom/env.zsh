@@ -8,6 +8,7 @@ PROJECTS=/projects/
 export MAU=${PROJECTS}/mau
 export STICKIES=${PROJECTS}/stickies
 export TIMESHEET=${PROJECTS}/timesheet
+export BEND=${PROJECTS}/bendable
 
 export PATH=$PATH:$GOPATH/bin
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
