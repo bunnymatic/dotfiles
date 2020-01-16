@@ -60,8 +60,9 @@
  '(jsx-indent-level 2 t)
  '(package-selected-packages
    (quote
-    (color-theme-modern projectile projectile-codesearch projectile-direnv projectile-git-autofetch projectile-rails tide rjsx-mode emojify web-mode tramp-term sws-mode slim-mode scss-mode sass-mode ruby-tools ruby-compilation rubocop multiple-cursors magit jump jsx-mode json-mode js2-mode jade-mode icicles git-blame flycheck flx-ido feature-mode exec-path-from-shell color-theme-sanityinc-solarized coffee-mode base16-theme alchemist ag add-node-modules-path)))
- '(standard-indent 2))
+    (rspec-mode color-theme-modern projectile projectile-codesearch projectile-direnv projectile-git-autofetch projectile-rails tide rjsx-mode emojify web-mode tramp-term sws-mode slim-mode scss-mode sass-mode ruby-tools ruby-compilation rubocop multiple-cursors magit jump jsx-mode json-mode js2-mode jade-mode icicles git-blame flycheck flx-ido feature-mode exec-path-from-shell color-theme-sanityinc-solarized coffee-mode base16-theme alchemist ag add-node-modules-path)))
+ '(standard-indent 2)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

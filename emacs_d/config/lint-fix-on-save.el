@@ -17,7 +17,7 @@
 
 (defun prettier-fix-file ()
   (interactive)
-  (shell-command (concat "yarn prettier --write " (buffer-file-name))))
+  (shell-command (concat "npm run prettier --write " (buffer-file-name))))
 
 (defun prettier-fix-file-and-revert ()
   (interactive)
