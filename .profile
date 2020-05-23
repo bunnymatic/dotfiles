@@ -113,6 +113,7 @@ export ASIAN=${PROJECTS}/asian
 export AWEB=${GAP}/allocation-web
 export BAPI=${PROJECTS}/bunnymatic-api
 export BAR=${PROJECTS}/barista
+export BEND=${PROJECTS}/bendable
 export BOOK=${GAP}/booking-manager
 export BOOKUI=${GAP}/booking-manager-ui
 export BRESBO=${PROJECTS}/bresbo
@@ -156,6 +157,7 @@ export TIMESHEET=${PROJECTS}/timesheet
 export TISVC=${GAP}/target-inventory-service
 export TRWEB=${PROJECTS}/tr/tr-webui
 export WORTHI=${PROJECTS}/worthi
+export ZINE=${PROJECTS}/c5-zine
 
 export PLASTIQ_GEMINI_DIR=${PROJECTS}/plastiq/gemini
 export PLASTIQ=${PROJECTS}/plastiq/gemini
