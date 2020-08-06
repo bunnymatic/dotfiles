@@ -22,3 +22,8 @@ export PYENV_ROOT=~/.pyenv/bin
 export PATH=$PYENV_ROOT:$PATH
 
 unsetopt HIST_VERIFY
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+export RH=~/projects/rhythm-app

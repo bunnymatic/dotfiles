@@ -3,12 +3,13 @@
 ;; (setq load-path (cons (expand-file-name "~/emacs/site-lisp") load-path))
 
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-			 ("melpa" . "https://melpa.org/packages/")))
+       ("melpa" . "https://melpa.org/packages/")))
 (require 'package)
 (package-initialize)
 
 (setq emacs-configuration-file-directory "~/.emacs.d/config")
 (load (format "%s/%s" emacs-configuration-file-directory "functions.el"))
+(load (format "%s/%s" emacs-configuration-file-directory "custom.el"))
 ;;; (load (format "%s/%s" emacs-configuration-file-directory "grep.el"))
 (load (format "%s/%s" emacs-configuration-file-directory "editor.el"))
 (load (format "%s/%s" emacs-configuration-file-directory "extension_mode_mapper.el"))
@@ -17,8 +18,8 @@
 (load (format "%s/%s" emacs-configuration-file-directory "tramp.el"))
 (load (format "%s/%s" emacs-configuration-file-directory "lint-fix-on-save.el"))
 (load (format "%s/%s" emacs-configuration-file-directory "ruby.el"))
+(load (format "%s/%s" emacs-configuration-file-directory "python.el"))
 (load (format "%s/%s" emacs-configuration-file-directory "typescript.el"))
-(load (format "%s/%s" emacs-configuration-file-directory "custom.el"))
 (load (format "%s/%s" emacs-configuration-file-directory "projectile.el"))
 
 (package-initialize)
@@ -68,4 +69,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "cornsilk" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Monaco")))))

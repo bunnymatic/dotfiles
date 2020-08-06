@@ -14,7 +14,7 @@
  '(jsx-indent-level 2)
  '(package-selected-packages
    (quote
-    (tide rjsx-mode emojify web-mode tramp-term sws-mode slim-mode scss-mode sass-mode ruby-tools ruby-compilation rubocop projectile-git-autofetch projectile-direnv multiple-cursors magit jump jsx-mode json-mode js2-mode jade-mode icicles helm-projectile git-blame flycheck flx-ido feature-mode exec-path-from-shell color-theme-sanityinc-solarized coffee-mode base16-theme alchemist ag add-node-modules-path)))
+    (tide rjsx-mode emojify web-mode tramp-term sws-mode slim-mode scss-mode sass-mode ruby-tools ruby-compilation rubocop projectile-git-autofetch projectile-direnv multiple-cursors magit jump jsx-mode json-mode js2-mode jade-mode icicles helm-projectile git-blame flycheck flx-ido feature-mode exec-path-from-shell color-theme-sanityinc-solarized coffee-mode base16-theme alchemist ag add-node-modules-path python-black elpy py-autopep8)))
  '(standard-indent 2))
 
 `(dired-listing-switches "-dired")

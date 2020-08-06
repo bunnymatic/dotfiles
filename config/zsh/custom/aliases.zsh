@@ -2,7 +2,7 @@ alias ls='ls -G '
 alias ll='ls -la '
 
 alias ed='emacs --daemon'
-alias ec='emacsclient -c -a=""'
+#alias ec='nohup emacsclient -c -a="" &!'
 alias killemacs="emacsclient -e '(kill-emacs)'"
 
 alias gs='git status'
@@ -21,3 +21,13 @@ alias simulator_android='/Users/jon/Library/Android/sdk/tools/emulator -netdelay
 alias simulator_ipad='xcrun instruments -w "iPad Air 2"'
 alias simulator_iphone='xcrun instruments -w "iPhone 6s Plus"'
 
+alias dc="docker-compose"
+
+function ec() {
+    emacsclient -c -a="" $* &!
+}
+
+alias dcr="docker-compose run app $*"
+alias dcm="docker-compose run app ./manage.py $*"
+alias dce="docker-compose exec app $*"
+alias dcem="docker-compose exec app ./manage.py $*"
