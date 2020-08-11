@@ -41,7 +41,7 @@ if dein#load_state('/Users/jon/.vim/bundle/dein.vim')
   call dein#add('Shougo/vimproc.vim') " async execution
 
   " Visual
-  call dein#add('altercation/vim-colors-solarized') " colors
+  " #call dein#add('altercation/vim-colors-solarized') " colors
   call dein#add('vim-airline/vim-airline') " status line
   call dein#add('vim-airline/vim-airline-themes') " status line colors
 
@@ -74,9 +74,7 @@ syntax enable
 "
 " Colors
 "
-let g:solarized_termcolors = 256
 set background=dark
-colorscheme solarized
 
 "
 " Autocommands

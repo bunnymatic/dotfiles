@@ -1,64 +1,50 @@
 [user]
-	email = jon@carbonfive.com
-	name = Jon Rogers
+  email = jon@carbonfive.com
+  name = Jon Rogers
 [alias]
-  sw = switch
-  swc = switch -c
-  st = status
-  ssb = status -sb
-  sw = switch
-  swc = switch -c
-  ci = commit
-  cia = commit --amend
-  cif = commit --fixup
-  co = checkout
-  cob = checkout -b
   br = branch
   branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
-  brm = branch --merged
+  ci = commit
+  cia = commit --amend
+  co = checkout
+  cob = checkout -b
+  fixup = commit --fixup
   lg = log -p
   lll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lolat = log --graph --decorate --pretty=oneline --abbrev-commit --all
   lola = log --graph --decorate --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+  lolat = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
-  ds   = diff --staged
-  cv   = commit -v
-  cm   = commit -m
-  cav  = commit -a -v
-  cam  = commit -a -m
+  ph   = push origin HEAD
+  phf  = push origin HEAD --force-with-lease
   pick = cherry-pick
   pl   = pull origin HEAD
-  ph   = push origin HEAD
-  phf   = push origin HEAD --force-with-lease
-  pup  = push -u origin HEAD
   prun = remote prune origin
+  pup  = push -u origin HEAD
   scrub = !sh -c 'git checkout main && git branch --merged main | grep -v \"*\" | xargs git branch -d && git remote prune origin'
-  di = diff
-  sta = stash
-  flog = log --pretty=fuller --decorate
-  fixup = commit --fixup
   squash = commit --squash
-  unstage = reset HEAD
-  stashitall = stash -u -k
-  resethh = reset --hard HEAD
-
-  stashshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  ssb = status -sb
+  st = status
+  sta = stash
   stashapply = "!f() { git stash apply stash^{/$*}; }; f"
+  stashitall = stash -u -k
+  stashshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  sw = switch
+  swc = switch -c
+  unstage = reset HEAD
 [color]
-  diff = auto
   branch = auto
-  status = auto
+  diff = auto
   interactive = auto
+  status = auto
   ui = auto
 [pivotal]
   api-token = ffa56514e3a370a2f1c146722a7217cf
-  rebase = 1
-  full-name = Jon Rogers
-  delete-branch = 1
   branch-format = feature-description-id
+  delete-branch = 1
+  full-name = Jon Rogers
   project-id = 824147
-
+  rebase = 1
 [merge]
   tool = tkdiff
 
@@ -69,29 +55,35 @@
 
 [branch]
   autosetupmerge = true
+
 [pull]
   default = upstream
-	ff = only
+  ff = only
+
 [heroku]
   account = rcode5
+
 [credential]
   helper = osxkeychain
+
 [core]
+  editor = vim
+  excludesfile = /Users/jon/.gitignore
   pager = less -FXRS -x2
-	excludesfile = /Users/jon/.gitignore
-	editor = vim
+
 [apply]
   whitespace = nowarn
+
 [rebase]
-	autosquash = true
-[user]
-	email = jon@carbonfive.com
-	name = Jon Rogers
+  autosquash = true
+
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+
 [mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+
 [hub]
-	protocol = https
+  protocol = https
