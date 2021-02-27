@@ -1,0 +1,7 @@
+__bundle_exec_list() {
+  COMPREPLY=()
+  local cur=${COMP_WORDS[COMP_CWORD]}
+  COMPREPLY=($(compgen -W 'rake rspec spec rails cucumber' -- $cur))
+}
+
+complete -F __bundle_exec_list -o default be

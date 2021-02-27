@@ -1,0 +1,7 @@
+__from_parse_config() {
+  COMPREPLY=()
+  local cur=${COMP_WORDS[COMP_CWORD]}
+  COMPREPLY=($(compgen -W 'add deploy develop list log new releases rollback' -- $cur))
+}
+
+complete -F __from_parse_config -o default parse
