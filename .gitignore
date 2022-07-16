@@ -26,7 +26,6 @@ emacs_d/eshell
 emacs_d/eshell/history
 emacs_d/eshell/lastdir
 emacs_d/ido.last
-emacs_d/init.el
 emacs_d/projectile-bookmarks.eld
 emacs_d/recentf
 emacs_d/rake.cache
