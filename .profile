@@ -25,6 +25,14 @@ alias simulator_android='/Users/jon/Library/Android/sdk/tools/emulator -netdelay
 alias simulator_ipad='xcrun instruments -w "iPad Air 2"'
 alias simulator_iphone='xcrun instruments -w "iPhone 6s Plus"'
 
+alias dc='docker-compose'
+alias dcr='docker-compose run --rm app'
+alias dcm='docker-compose run --rm app ./manage.py'
+
+alias xcode='/Applications/Xcode.app/Contents/MacOS/Xcode'
+#alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
+alias gw='./gradlew'
+
 foremandev() {
     foreman "$1" -f Procfile.dev
 }
@@ -181,8 +189,6 @@ export PHANTOMJS_BIN=`which phantomjs`
 
 export GOPATH=${PROJECTS}/goprojects
 
-alias xcode='/Applications/Xcode.app/Contents/MacOS/Xcode'
-#alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
 export GIT_SSL_NO_VERIFY=true
 
@@ -206,7 +212,6 @@ setup_pair() {
     export GIT_AUTHOR_EMAIL=$email
 }
 
-alias gw='./gradlew'
 
 # The next line updates PATH for the Google Cloud SDK.
 GOOGLE_CLOUD_SDK_DIR=~/google-cloud-sdk
