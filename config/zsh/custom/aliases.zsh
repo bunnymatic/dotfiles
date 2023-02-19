@@ -1,18 +1,17 @@
+
 alias ls='ls -G '
 alias ll='ls -la '
 
 alias ed='emacs --daemon'
-#alias ec='nohup emacsclient -c -a="" &!'
 alias killemacs="emacsclient -e '(kill-emacs)'"
 
-alias gs='git status'
 alias pd="pushd"
 alias pop="popd"
 alias lookfor="history | grep"
 
-#alias be='bundle exec '
+alias be='bundle exec '
 alias bi='bundle install '
-#alias bu='bundle update '
+alias bu='bundle update '
 
 alias serveit='python -m SimpleHTTPServer '
 alias servit='serveit'

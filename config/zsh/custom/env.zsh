@@ -5,10 +5,13 @@ export PHANTOMJS_BIN=`which phantomjs`
 export EDITOR=/usr/bin/vi
 PROJECTS=/projects/
 [[ -d ~/projects/ ]] && PROJECTS=~/projects/
+
+export BAPI=${PROJECTS}/bunnymatic-api
+export BRESBO=${PROJECTS}/bresbo
+export LT=${PROJECTS}/localtakesf
 export MAU=${PROJECTS}/mau
-export STICKIES=${PROJECTS}/stickies
-export TIMESHEET=${PROJECTS}/timesheet
-export BEND=${PROJECTS}/bendable
+export SC=${PROJECTS}/selectorschoice
+export ZINE=${PROJECTS}/c5-zine
 
 export PATH=$PATH:$GOPATH/bin
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -26,4 +29,3 @@ unsetopt HIST_VERIFY
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
-export RH=~/projects/rhythm-app

@@ -8,6 +8,7 @@
   cia = commit --amend
   co = checkout
   cob = checkout -b
+  difflist = diff --name-only
   fixup = commit --fixup
   lg = log -p
   lll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
