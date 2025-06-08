@@ -19,13 +19,13 @@
 (setq-default web-mode-css-indent-offset 2)
 (setq-default web-mode-markup-indent-offset 2)
 
-(load-theme 'jsc-dark t t)
-(enable-theme 'jsc-dark)
+(load-theme 'tsdh-dark)
+(enable-theme 'tsdh-dark)
 
 ;;(load-theme 'solarized-dark t)
-(global-linum-mode)
+;;(global-linum-mode)
 
-;; auto revert files
+; auto revert files
 (global-auto-revert-mode t)
 
 ;; Disable tool-bar

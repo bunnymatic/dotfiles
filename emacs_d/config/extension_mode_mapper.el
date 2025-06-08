@@ -15,9 +15,8 @@
 (setq auto-mode-alist (cons '("Capfile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.jade$" . jade-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.styl$" . jade-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.coffee$" . coffee-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.es6$" . rjsx-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.jsx?$" . rjsx-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.jsx?$" . web-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.tsx$" . web-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.pyc?$" . python-mode) auto-mode-alist))
 

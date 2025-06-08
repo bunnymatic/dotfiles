@@ -8,8 +8,12 @@ PROJECTS=/projects/
 
 export BAPI=${PROJECTS}/bunnymatic-api
 export BRESBO=${PROJECTS}/bresbo
+export BSS=${PROJECTS}/bryantstreetstudios
+export CTA=${PROJECTS}/cta
+export CTAM=${PROJECTS}/cta-mobile
 export LT=${PROJECTS}/localtakesf
 export MAU=${PROJECTS}/mau
+export ROPE=${PROJECTS}/practicerope
 export SC=${PROJECTS}/selectorschoice
 export ZINE=${PROJECTS}/c5-zine
 
@@ -29,3 +33,7 @@ unsetopt HIST_VERIFY
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+# Android/react-native development
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
